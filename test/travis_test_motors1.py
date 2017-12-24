@@ -30,7 +30,7 @@ class MotorTest(unittest.TestCase):
      def test_put_cmd_vel(self):
 	pub = rospy.Publisher('/cmd_vel', Twist)
 	m = Twist()
-	m.linear.x = 0.1414
+	m.linear.x = 0.1414		#この速度、各角度
 	m.angular.z = 1.57
 	for i in range(10):
 	    pub.publish(m)
