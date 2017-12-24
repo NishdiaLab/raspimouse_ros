@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#encoding utf8
+#encoding: utf8
 import unittest, rostest
 import rosnode, rospy
 import time
@@ -15,7 +15,7 @@ class MotorTest(unittest.TestCase):
 	nodes = rosnode.get_node_names()
 	self.assertIn('/motors', nodes, "node does not exist")
 
-    def test_pub_freq(self):
+    def test_put_freq(self):
 	pub = rospy.Publisher('/motor_raw', MotorFreqs)
 	m = MotorFreqs()
 	m.left_hz = 123
