@@ -29,7 +29,7 @@ class MotorTest(unittest.TestCase):
 
      def test_put_cmd_vel(self):
 	pub = rospy.Publisher('/cmd_vel', Twist)
-	m = Twist
+	m = Twist()
 	m.linear.x = 0.1414
 	m.angular.z = 1.57
 	for i in range(10):
@@ -40,8 +40,8 @@ class MotorTest(unittest.TestCase):
 	self.file_check("rtmotor_raw_r0",600,"wrong right value from cmd_vel")
 
 	time.sleep(1.1)
-	self.file_check("rtmotor_raw_r0",0,"don't stop after l[s]")
-	self.file_check("rtmotor_raw_l0",0,"don't stop after l[s]")
+	self.file_check("rtmotor_raw_r0",0,"don't stop after 1[s]")
+	self.file_check("rtmotor_raw_l0",0,"don't stop after 1[s]")
 
 if __name__ == '__main__':
     time.sleep(3)
