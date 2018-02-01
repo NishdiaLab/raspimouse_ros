@@ -53,6 +53,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    LightSensorValues.msg
    MotorFreqs.msg
+   LSV.msg
  )
 
 ## Generate services in the 'srv' folder
