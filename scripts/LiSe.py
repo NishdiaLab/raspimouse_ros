@@ -17,8 +17,8 @@ def get_freq():
 if __name__ == '__main__':
     devfile = '/dev/rtlightsensor0'
     rospy.init_node('lightsensors')
-    pub = rospy.Publisher('LiSe001', LightSensorValues, queue_size=1)
-    pub = rospy.Publisher('LiSe002', LightSensorValues, queue_size=1)
+    pub = rospy.Publisher('LiSe01', LightSensorValues, queue_size=1)
+    pub = rospy.Publisher('LiSe02', LightSensorValues, queue_size=1)
 
     freq = get_freq()
     rate = rospy.Rate(freq)
